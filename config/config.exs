@@ -11,6 +11,9 @@ config :super_raffle,
   ecto_repos: [SuperRaffle.Repo],
   generators: [timestamp_type: :utc_datetime]
 
+config :super_raffle,
+migration_primary_key: [name: :uuid, type: :binary_id]
+
 # Configures the endpoint
 config :super_raffle, SuperRaffleWeb.Endpoint,
   url: [host: "localhost"],
